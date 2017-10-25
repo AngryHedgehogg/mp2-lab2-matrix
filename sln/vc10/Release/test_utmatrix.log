@@ -1,0 +1,70 @@
+﻿Build started 25.10.2017 15:20:42.
+     1>Project "Z:\mp2-lab2-matrix\sln\vc10\test_utmatrix.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\test_utmatrix.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../../gtest /I../../include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\test\test_tmatrix.cpp ..\..\test\test_tvector.cpp
+         test_tmatrix.cpp
+     1>Z:\mp2-lab2-matrix\include\utmatrix.h(67): error C2065: 'T' : undeclared identifier
+                 Z:\mp2-lab2-matrix\include\utmatrix.h(64) : while compiling class template member function 'TVector<ValType>::TVector(int,int)'
+                 with
+                 [
+                     ValType=TVector<int>
+                 ]
+                 Z:\mp2-lab2-matrix\include\utmatrix.h(78) : while compiling class template member function 'TVector<ValType>::~TVector(void)'
+                 with
+                 [
+                     ValType=TVector<int>
+                 ]
+                 Z:\mp2-lab2-matrix\include\utmatrix.h(135) : see reference to class template instantiation 'TVector<ValType>' being compiled
+                 with
+                 [
+                     ValType=TVector<int>
+                 ]
+                 ..\..\test\test_tmatrix.cpp(7) : see reference to class template instantiation 'TMatrix<ValType>' being compiled
+                 with
+                 [
+                     ValType=int
+                 ]
+     1>Z:\mp2-lab2-matrix\include\utmatrix.h(67): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'TVector<ValType>' (or there is no acceptable conversion)
+                 with
+                 [
+                     ValType=TVector<int>
+                 ]
+                 Z:\mp2-lab2-matrix\include\utmatrix.h(35): could be 'TVector<ValType> &TVector<ValType>::operator =(const TVector<ValType> &)'
+                 with
+                 [
+                     ValType=int
+                 ]
+                 while trying to match the argument list '(TVector<ValType>, TVector<ValType>)'
+                 with
+                 [
+                     ValType=int
+                 ]
+                 and
+                 [
+                     ValType=TVector<int>
+                 ]
+         test_tvector.cpp
+     1>Z:\mp2-lab2-matrix\include\utmatrix.h(67): error C2065: 'T' : undeclared identifier
+                 Z:\mp2-lab2-matrix\include\utmatrix.h(64) : while compiling class template member function 'TVector<ValType>::TVector(int,int)'
+                 with
+                 [
+                     ValType=int
+                 ]
+                 ..\..\test\test_tvector.cpp(7) : see reference to class template instantiation 'TVector<ValType>' being compiled
+                 with
+                 [
+                     ValType=int
+                 ]
+     1>Z:\mp2-lab2-matrix\include\utmatrix.h(67): error C2440: '=' : cannot convert from 'TVector<ValType>' to 'int'
+                 with
+                 [
+                     ValType=int
+                 ]
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Done Building Project "Z:\mp2-lab2-matrix\sln\vc10\test_utmatrix.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.85

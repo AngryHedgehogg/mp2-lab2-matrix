@@ -45,6 +45,7 @@ public:
   ValType  operator*(const TVector &v);     // скалярное произведение
 
   // ввод-вывод
+
   friend istream& operator>>(istream &in, TVector &v)
   {
     for (int i = 0; i < v.Size; i++)
@@ -59,14 +60,32 @@ public:
   }
 };
 
+
 template <class ValType>
 TVector<ValType>::TVector(int s, int si)
 {
+	if(s<0 || s> MAX_VECTOR_SIZE)
+		throw ("error1");
+		if (si<0)
+			throw ("error1");
+		else 
+		{	
+			Size=s;
+			StartIndex=si;
+			pVector= new ValType [Size];
+		}
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> //конструктор копирования
 TVector<ValType>::TVector(const TVector<ValType> &v)
 {
+	Size=v.Size;
+	StartIndex=v.StartIndex;
+	pVector= new ValType [Size];
+	for(int i=0;i<Size;i++)
+	{
+     pVector[i]=v.pVector[i];
+	}
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType>
@@ -77,6 +96,7 @@ TVector<ValType>::~TVector()
 template <class ValType> // доступ
 ValType& TVector<ValType>::operator[](int pos)
 {
+	return (pos);
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // сравнение
@@ -140,7 +160,7 @@ public:
   TMatrix  operator- (const TMatrix &mt);        // вычитание
 
   // ввод / вывод
-  friend istream& operator>>(istream &in, TMatrix &mt)
+  /*friend istream& operator>>(istream &in, TMatrix &mt)
   {
     for (int i = 0; i < mt.Size; i++)
       in >> mt.pVector[i];
@@ -151,12 +171,13 @@ public:
     for (int i = 0; i < mt.Size; i++)
       out << mt.pVector[i] << endl;
     return out;
-  }
+  }*/
 };
 
 template <class ValType>
 TMatrix<ValType>::TMatrix(int s): TVector<TVector<ValType> >(s)
 {
+
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // конструктор копирования

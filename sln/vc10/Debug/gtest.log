@@ -1,0 +1,17 @@
+﻿Build started 25.10.2017 15:58:50.
+     1>Project "Z:\mp2-lab2-matrix\sln\vc10\gtest.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\gtest.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Lib:
+         All outputs are up-to-date.
+         gtest.vcxproj -> Z:\mp2-lab2-matrix\sln\vc10\Debug\gtest.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\gtest.unsuccessfulbuild".
+         Touching "Debug\gtest.lastbuildstate".
+     1>Done Building Project "Z:\mp2-lab2-matrix\sln\vc10\gtest.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.54
