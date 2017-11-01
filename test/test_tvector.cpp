@@ -183,7 +183,7 @@ TEST(TVector, can_add_vectors_with_equal_size)
 	v2[1] = 4;
 	v3[1] = 6;
 	v1 = v1 + v2;
-	EXPECT_EQ(v1, v3);
+	EXPECT_EQ(v3, v1);
 }
 
 TEST(TVector, cant_add_vectors_with_not_equal_size)

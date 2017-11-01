@@ -259,8 +259,6 @@ template <class ValType> // конструктор копирования
 TMatrix<ValType>::TMatrix(const TMatrix<ValType> &mt):
   TVector<TVector<ValType> >(mt) 
 {
-	for (int i = 0; i < Size; i++)
-		pVector[i] = mt.pVector[i];
 }
 
 template <class ValType> // конструктор преобразования типа
