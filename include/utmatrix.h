@@ -265,7 +265,6 @@ template <class ValType> // конструктор преобразования 
 TMatrix<ValType>::TMatrix(const TVector<TVector<ValType> > &mt):
 	TVector<TVector<ValType> >(mt)
 {
-
 }
 
 template <class ValType> // сравнение
@@ -291,7 +290,6 @@ template <class ValType> // сложение
 TMatrix<ValType> TMatrix<ValType>::operator+(const TMatrix<ValType> &mt)
 {
 	return TVector< TVector<ValType> >::operator+(mt);
-
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // вычитание
